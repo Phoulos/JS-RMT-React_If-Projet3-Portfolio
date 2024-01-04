@@ -1,13 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Vite App</title>
+      <style>
+         /* Global */
+         * {
+         margin: 0;
+         padding: 0;
+         font-family: Arial, Helvetica;
+         }
+         /* Header */
+         header {
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+         padding: 20px 50px;
+         box-shadow: 0 1px 8px #ddd;
+         }
+         #nav-title {
+         margin-right: auto;
+         font-size: 1.5em;
+         }
+         header li {
+         list-style: none;
+         display: inline-block;
+         padding: 0 20px;
+         }
+         header a {
+         text-decoration: none;
+         color: #555;
+         transition: all 0.3s ease 0s;
+         }
+         header a:hover {
+         color: #b2dfdb;
+         }
+        
+         #page {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+         }
+         #content {
+          padding: 20px;
+          flex-grow: 1;
+         }
+
+         #footer {
+          display: flex;
+        }
+
+        #footer nav ul {
+          display: flex;
+          
+        }
+
+        #footer nav ul li {
+          list-style: none;
+          padding-right: 5px;
+        
+        }
+      </style>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div id="page">
+        <div class="header">
+         <header>
+            <h1 id="nav-title">LOGO ICI</h1>
+            <nav>
+               <ul>
+                  <li><a href="#">Se connecter</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+               </ul>
+            </nav>
+         </header>
+      </div>
+      <div id="content">
+         <div id="root"></div>
+      </div>
+      <div id="footer">
+         <footer>
+            <nav>
+               <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Youtube</a></li>
+               </ul>
+            </nav>
+         </footer>
+      </div>
+    </div>
+      
+      <script type="module" src="/src/main.jsx"></script>
+   </body>
 </html>
