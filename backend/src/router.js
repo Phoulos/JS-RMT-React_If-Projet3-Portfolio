@@ -8,15 +8,17 @@ const router = express.Router();
 
 // Import itemControllers module for handling item-related operations
 const itemControllers = require("./controllers/itemControllers");
+const projetController = require('./controllers/projetControllers')
 
-// Route to get a list of items
+// Routes items
 router.get("/items", itemControllers.browse);
-
-// Route to get a specific item by ID
 router.get("/items/:id", itemControllers.read);
-
-// Route to add a new item
 router.post("/items", itemControllers.add);
+
+// Routes projets
+router.get("/projets", projetController.browse);
+router.get("/projets/:id", projetController.read);
+router.post("/projets", projetController.add);
 
 /* ************************************************************************* */
 
